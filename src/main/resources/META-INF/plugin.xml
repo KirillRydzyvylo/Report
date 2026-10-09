@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.example.auth-idea-plugin</id>
-    <name>Auth Plugin</name>
+    <name>Report</name>
     <vendor>kirill</vendor>
     <description><![CDATA[
     Плагин с инструментным окном "Auth": вкладка авторизации (логин/пароль)

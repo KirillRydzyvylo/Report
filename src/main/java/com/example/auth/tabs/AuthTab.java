@@ -5,6 +5,7 @@ import com.intellij.ui.components.JBLabel;
 import com.intellij.ui.components.JBPasswordField;
 import com.intellij.ui.components.JBTextField;
 import com.intellij.ui.components.JBPanel;
+import com.intellij.util.ui.JBUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -42,7 +43,7 @@ public class AuthTab {
 
         var panel = new JBPanel<>(new GridBagLayout());
         GridBagConstraints gc = new GridBagConstraints();
-        gc.insets = new Insets(8, 8, 8, 8);
+        gc.insets = JBUI.insets(8);
         gc.fill = GridBagConstraints.HORIZONTAL;
         gc.gridx = 0;
         gc.gridy = 0;
