@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.example.auth-idea-plugin</id>
+    <name>Auth Plugin</name>
+    <vendor>kirill</vendor>
+    <description><![CDATA[
+    Плагин с инструментным окном "Auth": вкладка авторизации (логин/пароль)
+    и вкладка сессии (текущий авторизованный пользователь).
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="AuthPlugin" displayType="BALLOON"/>
+        <toolWindow id="Auth"
+                    anchor="right"
+                    icon="AllIcons.Toolwindows.ToolWindowProject"
+                    factoryClass="com.example.auth.AuthToolWindowFactory"/>
+    </extensions>
+</idea-plugin>
