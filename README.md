@@ -47,6 +47,17 @@
 Settings → Plugins → ⚙ → **Install Plugin from Disk…** → выберите zip из
 `build/distributions/` → перезапуск IDE.
 
+## Mock-сервер для тестирования
+
+В папке `mock/` лежит простой mock-сервер авторизации (Python, без зависимостей):
+
+```bash
+python3 mock/mock_auth_server.py
+```
+
+Контракт: **POST /api/login** `{login, password}` → при совпадении логина и пароля
+`200 {"token": "..."}`, иначе `401`. Логин/пароль должны быть одинаковыми.
+
 ## Что дальше
 
 - Реальная авторизация: в `AuthToolWindowFactory.createAuthTab()` в месте с

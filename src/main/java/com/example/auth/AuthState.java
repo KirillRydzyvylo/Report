@@ -17,6 +17,7 @@ public final class AuthState {
     private final List<Listener> listeners = new CopyOnWriteArrayList<>();
 
     private String login;
+    private String token;
     private boolean authenticated;
 
     private AuthState() {
@@ -32,6 +33,15 @@ public final class AuthState {
 
     public String getLogin() {
         return login;
+    }
+
+    /** Токен из ответа сервера (если сервер его вернул). */
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public void login(String login) {
